@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmStore Locator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #22c55e;
+        }
+
+        .logo svg {
+            margin-right: 0.5rem;
+        }
+
+        main {
+            padding: 2rem 0;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .search-input {
+            width: 100%;
+            max-width: 500px;
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .search-button {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+            background-color: #22c55e;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 0.5rem;
+        }
+
+        .storage-list h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .storage-card {
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .storage-card h3 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .storage-card .distance {
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        .storage-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .storage-details h4 {
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        footer {
+            background-color: #f3f4f6;
+            border-top: 1px solid #e0e0e0;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p, .footer-section ul {
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        .footer-section ul {
+            list-style-type: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .storage-details {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                FarmStore Locator
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="hero">
+                <h1>Find Nearby Cold Storages</h1>
+                <p>Discover the best rates and storage options for your produce</p>
+                <div class="search-container">
+                    <input type="text" placeholder="Enter your location" class="search-input">
+                    <button class="search-button">Search</button>
+                </div>
+            </section>
+
+            <section class="storage-list">
+                <h2>Nearby Cold Storages</h2>
+                <div class="storage-card">
+                    <h3>
+                        <span>FreshKeep Storage</span>
+                        <span class="distance">2.5 km</span>
+                    </h3>
+                    <div class="storage-details">
+                        <div>
+                            <h4>Rate:</h4>
+                            <p>₹5000/month</p>
+                        </div>
+                        <div>
+                            <h4>Capacity:</h4>
+                            <p>750 kg</p>
+                        </div>
+                        <div>
+                            <h4>Phone:</h4>
+                            <p>+91 98765 43210</p>
+                        </div>
+                        <div>
+                            <h4>Storable Produce:</h4>
+                            <p>Apples, Pears, Carrots, Potatoes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="storage-card">
+                    <h3>
+                        <span>CoolHarvest Facility</span>
+                        <span class="distance">4.1 km</span>
+                    </h3>
+                    <div class="storage-details">
+                        <div>
+                            <h4>Rate:</h4>
+                            <p>₹4500/month</p>
+                        </div>
+                        <div>
+                            <h4>Capacity:</h4>
+                            <p>800 kg</p>
+                        </div>
+                        <div>
+                            <h4>Phone:</h4>
+                            <p>+91 87654 32109</p>
+                        </div>
+                        <div>
+                            <h4>Storable Produce:</h4>
+                            <p>Mangoes, Tomatoes, Onions, Cabbage</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="storage-card">
+                    <h3>
+                        <span>AgroFrost Solutions</span>
+                        <span class="distance">5.7 km</span>
+                    </h3>
+                    <div class="storage-details">
+                        <div>
+                            <h4>Rate:</h4>
+                            <p>₹5500/month</p>
+                        </div>
+                        <div>
+                            <h4>Capacity:</h4>
+                            <p>700 kg</p>
+                        </div>
+                        <div>
+                            <h4>Phone:</h4>
+                            <p>+91 76543 21098</p>
+                        </div>
+                        <div>
+                            <h4>Storable Produce:</h4>
+                            <p>Grapes, Oranges, Cauliflower, Peas</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>FarmStore Locator helps farmers find the best cold storage solutions for their produce.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li>FAQs</li>
+                        <li>Privacy Policy</li>
+                        <li>Terms of Service</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@farmstorelocator.com</p>
+                    <p>Phone: +91 123 456 7890</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 FarmStore Locator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
